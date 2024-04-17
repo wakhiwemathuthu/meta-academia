@@ -73,9 +73,9 @@ function SignUp() {
         </Link>
       </p>
       <div className="text-primary opacity-60 flex items-center gap-2 mt-3">
-        <div className="border w-full"></div>
+        <div className="border-t w-full"></div>
         <span>or</span>
-        <div className="border w-full"></div>
+        <div className="border-t w-full"></div>
       </div>
       <button className="btn mt-6 btn-outline text-primary btn-primary btn-block">
         <img src={gLogo} className=" h-6" alt="google logo" />
