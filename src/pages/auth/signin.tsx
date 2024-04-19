@@ -16,7 +16,7 @@ function SignIn() {
   };
 
   return (
-    <form className="bg-white rounded-box p-8 w-[28rem]">
+    <form className="bg-white rounded-box shadow-2xl p-8 w-[28rem]">
       <h1 className="text-xl font-bold text-primary text-center">Sign In</h1>
       <p className="text-center text-primary opacity-60 mt-2">
         Welcome back! We're thrilled to have you here again.
@@ -60,11 +60,7 @@ function SignIn() {
           Sign Up
         </Link>
       </p>
-      <div className="text-primary opacity-60 flex items-center gap-2 mt-3">
-        <div className="border-t w-full"></div>
-        <span>or</span>
-        <div className="border-t w-full"></div>
-      </div>
+      <div className=" divider">or</div>
       <button className="btn mt-6 btn-outline text-primary btn-primary btn-block">
         <img src={gLogo} className=" h-6" alt="google logo" />
         <span>Continue with Google</span>

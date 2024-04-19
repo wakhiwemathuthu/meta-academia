@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        "2xl": "1px 2px 12px rgba(0,0,0,0.03)",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
