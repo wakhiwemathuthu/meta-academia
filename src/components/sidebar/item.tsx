@@ -19,15 +19,15 @@ function SidebarItem({ to, title, icon }: Props) {
             }`}
           >
             <span
-              className={`text-primary opacity-40 text-xl ${
-                isActive ? " opacity-100" : ""
+              className={`text-primary  text-xl ${
+                isActive ? " opacity-100" : "opacity-40"
               }`}
             >
               {icon}
             </span>
             <p
-              className={`text-primary font-semibold opacity-40 hidden md:block ${
-                isActive ? " opacity-100" : ""
+              className={`text-primary font-semibold hidden md:block ${
+                isActive ? " opacity-100" : "opacity-40 "
               }`}
             >
               {title}
