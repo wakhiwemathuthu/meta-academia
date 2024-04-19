@@ -67,7 +67,7 @@ function SignIn() {
       </div>
       <button className="btn mt-6 btn-outline text-primary btn-primary btn-block">
         <img src={gLogo} className=" h-6" alt="google logo" />
-        <span>Sign in with Google</span>
+        <span>Continue with Google</span>
       </button>
       <p className="text-primary opacity-60 mt-6 text-center">
         By signing in to create an account you accept our{" "}
