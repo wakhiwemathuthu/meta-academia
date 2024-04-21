@@ -2,7 +2,7 @@
 
 E-learning platform empowering learners to master programming skills with comprehensive courses and practical projects.
 
-**View live version** : https://meta-ii.github.io/meta-academia
+**View live version** : https://wakhiwemathuthu.github.io/meta-academia
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
