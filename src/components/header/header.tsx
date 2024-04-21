@@ -29,7 +29,7 @@ const formattedDate = `${
 
 function Header({ title }: Props) {
   return (
-    <div className="py-3 px-3 md:px-6  flex items-center gap-4">
+    <div className="py-3 px-3 h-20 md:px-6 absolute top-0 left-0 right-0 flex items-center gap-4">
       <div className="flex items-center gap-4 w-full">
         <h2 className=" hidden md:block text-xl font-bold text-primary">
           {title}
@@ -42,7 +42,7 @@ function Header({ title }: Props) {
           {formattedDate}
         </p>
       </div>
-      <div className="flex items-center gap-2 ml-3">
+      <div className="flex items-center gap-2 ml-3 ">
         <button className=" hidden lg:grid btn btn-circle btn-ghost group hover:bg-primary">
           <FaRegHeart className="text-xl text-primary group-hover:text-white group-hover:opacity-100 opacity-40 " />
         </button>
@@ -53,7 +53,7 @@ function Header({ title }: Props) {
           <div className="avatar">
             <div className="w-12 h-12 rounded-full">
               <img
-                src="https://img.freepik.com/free-vector/hand-drawn-people-with-dreadlocks-illustration_23-2149752847.jpg?t=st=1713689235~exp=1713692835~hmac=971d63f09dcba6cfb570686d150128f0236580dc14dc6261c0e8c1205582c9e7&w=826"
+                src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?t=st=1713694595~exp=1713698195~hmac=4cdad1225f423b424a37a9cd732201b5b7b9356775b6ca3a775cd2bc5618a47d&w=826"
                 alt="profile image"
               />
             </div>
