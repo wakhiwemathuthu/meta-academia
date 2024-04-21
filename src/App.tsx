@@ -12,7 +12,7 @@ function App() {
     return (
       <div className="bg-[#f6f9fb] relative h-screen">
         <Sidebar />
-        <div className="absolute top-0 bottom-0 left-80 right-0">
+        <div className="absolute top-0 bottom-0 left-20 md:left-80 right-0">
           <Routes>
             <Route path="/" element={<Dashboard />} />
           </Routes>
