@@ -4,6 +4,11 @@ import SignIn from "./pages/auth/signin";
 import Welcome from "./pages/auth/welcome";
 import Dashboard from "./pages/dashboard/dashboard";
 import Sidebar from "./components/sidebar/sidebar";
+import Courses from "./pages/courses/courses";
+import Chats from "./pages/chats/chats";
+import Shedule from "./pages/shedule/shedule";
+import Profile from "./pages/profile/profile";
+import Settings from "./pages/settings/settings";
 
 function App() {
   const logedIn = true;
@@ -15,6 +20,11 @@ function App() {
         <div className="absolute top-0 bottom-0 left-20 md:left-80 right-0">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/chats" element={<Chats />} />
+            <Route path="/shedule" element={<Shedule />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
       </div>
