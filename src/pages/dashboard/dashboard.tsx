@@ -14,7 +14,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Line, Doughnut } from "react-chartjs-2";
+import { ChangeEvent, useState } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -29,6 +30,8 @@ ChartJS.register(
 );
 
 function Dashboard() {
+  const [activity, setActivity] = useState("daily");
+
   const doughnutData = {
     labels: ["Completed", "In Progress", "Not Started"],
 
@@ -44,6 +47,72 @@ function Dashboard() {
       },
     ],
   };
+
+  const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const daily = [65, 59, 80, 81, 56, 55, 40];
+  const monthly = [54, 31, 43, 76, 56, 55, 40, 65, 59, 44, 39, 56];
+
+  const data = {
+    labels: activity === "daily" ? weekdays : months,
+    datasets: [
+      {
+        data: activity === "daily" ? daily : monthly,
+        fill: false,
+        borderColor: "rgb(255, 132, 75)",
+        tension: 0.4,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    devicePixelRatio: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+
   return (
     <div>
       <Header title="Dashboard" />
@@ -109,7 +178,22 @@ function Dashboard() {
           </div>
         </div>
         <div className=" p-4 rounded-2xl bg-white shadow-2xl col-span-2 row-span-2">
-          activity
+          <div className="flex items-center justify-between">
+            <p className="font-bold text-primary">Activity</p>
+            <select
+              value={activity}
+              onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+                setActivity(e.target.value);
+              }}
+              className=" select select-sm select-ghost"
+            >
+              <option value="daily">Daily</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div className="h-[90%] w-full">
+            <Line data={data} options={options} />
+          </div>
         </div>
         <div className=" p-4 rounded-2xl bg-white shadow-2xl col-span-3 row-span-2">
           Courses
