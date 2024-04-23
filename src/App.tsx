@@ -11,7 +11,7 @@ import Profile from "./pages/profile/profile";
 import Settings from "./pages/settings/settings";
 
 function App() {
-  const logedIn = false;
+  const logedIn = true;
 
   if (logedIn) {
     return (
