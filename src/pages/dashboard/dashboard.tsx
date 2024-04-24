@@ -19,8 +19,6 @@ import { ChangeEvent, useState } from "react";
 import CourseCard from "../../components/course-card";
 import { Link } from "react-router-dom";
 import ChatCard from "../../components/chat-card";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 ChartJS.register(
   CategoryScale,
@@ -87,6 +85,7 @@ function Dashboard() {
         data: activity === "daily" ? daily : monthly,
         fill: false,
         borderColor: "rgb(255, 132, 75)",
+        borderWidth: 2,
         tension: 0.4,
       },
     ],
@@ -235,7 +234,7 @@ function Dashboard() {
         </div>
         <div className="p-4 rounded-2xl bg-white shadow-2xl row-span-2">
           <div className="h-full flex flex-col">
-            <div className="flex items-start justify-between">
+            <div className="flex items-start h-full justify-between">
               <p className="font-bold text-primary">Community</p>
               <Link
                 to="/community"
@@ -244,7 +243,7 @@ function Dashboard() {
                 See All
               </Link>
             </div>
-            <div className="h-full overflow-y-auto flex flex-col justify-center gap-3">
+            <div className="h-full flex flex-col gap-3">
               <ChatCard
                 username={"John Doe"}
                 message={"Guys i need help in TypeScript"}

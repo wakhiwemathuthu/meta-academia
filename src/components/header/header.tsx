@@ -1,3 +1,4 @@
+import Avatar from "react-avatar";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiBell } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
@@ -42,23 +43,49 @@ function Header({ title }: Props) {
           {formattedDate}
         </p>
       </div>
-      <div className="flex items-center gap-2 ml-3 ">
-        <button className=" hidden lg:grid btn btn-circle btn-ghost group hover:bg-primary">
-          <FaRegHeart className="text-xl text-primary group-hover:text-white group-hover:opacity-100 opacity-40 " />
-        </button>
-        <button className="hidden lg:grid btn btn-circle btn-ghost group hover:bg-primary">
-          <FiBell className="text-xl text-primary group-hover:text-white group-hover:opacity-100 opacity-40 " />
-        </button>
+      <div className="flex items-center gap-3 ml-3 ">
+        <div className="dropdown dropdown-left">
+          <div tabIndex={0} role="button">
+            <FiBell className="text-lg text-primary group-hover:text-white group-hover:opacity-100 opacity-40 " />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu mt-8 z-[1] w-60 bg-white rounded-2xl shadow-4xl"
+          >
+            <li>
+              <a href="#">Notification 1</a>
+            </li>
+            <li>
+              <a href="#">Notification 2</a>
+            </li>{" "}
+            <li>
+              <a href="#">Notification 3</a>
+            </li>{" "}
+            <li>
+              <a href="#">Notification 4</a>
+            </li>
+          </ul>
+        </div>
         <div className="flex items-center gap-2">
           <div className="avatar">
-            <div className="w-12 h-12 rounded-full">
-              <img
-                src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?t=st=1713694595~exp=1713698195~hmac=4cdad1225f423b424a37a9cd732201b5b7b9356775b6ca3a775cd2bc5618a47d&w=826"
-                alt="profile image"
-              />
-            </div>
+            <Avatar size="30" round name="John Doe" />
           </div>
-          <IoIosArrowDown className="text-xl text-primary opacity-40" />
+          <div className="dropdown dropdown-left">
+            <div tabIndex={0} role="button" className="cursor-pointer">
+              <IoIosArrowDown className="text-primary opacity-40" />
+            </div>
+            <ul
+              tabIndex={0}
+              className=" dropdown-content mt-8 menu z-[1] bg-white w-52 rounded-2xl shadow-4xl"
+            >
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
