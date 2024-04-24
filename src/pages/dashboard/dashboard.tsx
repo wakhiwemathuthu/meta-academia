@@ -19,6 +19,12 @@ import { ChangeEvent, useState } from "react";
 import CourseCard from "../../components/course-card";
 import { Link } from "react-router-dom";
 import ChatCard from "../../components/chat-card";
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaAnglesLeft,
+  FaAnglesRight,
+} from "react-icons/fa6";
 
 ChartJS.register(
   CategoryScale,
@@ -142,7 +148,27 @@ function Dashboard() {
         </div>
         <div className="row-span-3 p-4 rounded-2xl bg-white shadow-2xl">
           <Calendar
-            showNavigation={false}
+            prev2Label={
+              <div className="flex justify-center">
+                <FaAnglesLeft />
+              </div>
+            }
+            prevLabel={
+              <div className="flex justify-center">
+                <FaAngleLeft />
+              </div>
+            }
+            next2Label={
+              <div className="flex justify-center">
+                <FaAnglesRight />
+              </div>
+            }
+            nextLabel={
+              <div className="flex justify-center">
+                <FaAngleRight />
+              </div>
+            }
+            showNavigation={true}
             onChange={() => {}}
             value={[new Date(), new Date("25-04-23")]}
             className="text-primary"
