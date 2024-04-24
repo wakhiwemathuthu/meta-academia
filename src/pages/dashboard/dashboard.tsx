@@ -16,6 +16,7 @@ import {
 } from "chart.js";
 import { Line, Doughnut } from "react-chartjs-2";
 import { ChangeEvent, useState } from "react";
+import CourseCard from "../../components/course-card";
 
 ChartJS.register(
   CategoryScale,
@@ -196,7 +197,36 @@ function Dashboard() {
           </div>
         </div>
         <div className=" p-4 rounded-2xl bg-white shadow-2xl col-span-3 row-span-2">
-          Courses
+          <div className="h-full flex flex-col">
+            <div className="flex items-start justify-between h-full">
+              <p className="font-bold text-primary">My Courses</p>
+              <select className=" select select-sm select-ghost">
+                <option value="daily">All</option>
+                <option value="daily">Completed</option>
+                <option value="monthly">In Progress</option>
+              </select>
+            </div>
+            <div className="flex flex-col gap-3 h-full">
+              <CourseCard
+                title="Graphic Design Theory - Typography"
+                createdBy="Boyd Lewis"
+                progress={100}
+                status="completed"
+              />
+              <CourseCard
+                title="Digital Marketing:How to Generate Sales"
+                createdBy="Tony Matt"
+                progress={58}
+                status="in progress"
+              />
+              <CourseCard
+                title="Web Development"
+                createdBy="Dave Gray"
+                progress={6}
+                status="in progress"
+              />
+            </div>
+          </div>
         </div>
         <div className="p-4 rounded-2xl bg-white shadow-2xl row-span-2">
           chats
