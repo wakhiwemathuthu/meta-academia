@@ -1,10 +1,10 @@
 import Header from "../../components/header/header";
 
-function Chats() {
+function Community() {
   return (
     <div className="h-full">
-      <Header title="Chats" />
+      <Header title="Community" />
     </div>
   );
 }
-export default Chats;
+export default Community;

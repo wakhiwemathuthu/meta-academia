@@ -17,6 +17,8 @@ import {
 import { Line, Doughnut } from "react-chartjs-2";
 import { ChangeEvent, useState } from "react";
 import CourseCard from "../../components/course-card";
+import { Link } from "react-router-dom";
+import ChatCard from "../../components/chat-card";
 
 ChartJS.register(
   CategoryScale,
@@ -229,7 +231,34 @@ function Dashboard() {
           </div>
         </div>
         <div className="p-4 rounded-2xl bg-white shadow-2xl row-span-2">
-          chats
+          <div className="h-full flex flex-col">
+            <div className="flex items-start justify-between">
+              <p className="font-bold text-primary">Community</p>
+              <Link
+                to="/community"
+                className="text-primary opacity-60 text-sm hover:link"
+              >
+                See All
+              </Link>
+            </div>
+            <div className="h-full flex flex-col justify-center gap-3">
+              <ChatCard
+                username={"John Doe"}
+                message={"Guys i need help in TypeScript"}
+                date="24-04-24"
+              />
+              <ChatCard
+                username={"Wakhiwe"}
+                message={"Hello Everyone"}
+                date="22-04-24"
+              />
+              <ChatCard
+                username={"Faith Matt"}
+                message={" Lorem ipsum dolor sit amet."}
+                date="26-04-24"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -24,8 +24,8 @@ function Sidebar() {
             <SidebarItem to="/" title="Dashboard" icon={<TbDashboard />} />
             <SidebarItem to="/courses" title="Courses" icon={<PiNotebook />} />
             <SidebarItem
-              to="/chats"
-              title="Chats"
+              to="/community"
+              title="Community"
               icon={<HiOutlineChatBubbleBottomCenterText />}
             />
             <SidebarItem

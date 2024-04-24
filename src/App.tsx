@@ -5,10 +5,10 @@ import Welcome from "./pages/auth/welcome";
 import Dashboard from "./pages/dashboard/dashboard";
 import Sidebar from "./components/sidebar/sidebar";
 import Courses from "./pages/courses/courses";
-import Chats from "./pages/chats/chats";
 import Shedule from "./pages/shedule/shedule";
 import Profile from "./pages/profile/profile";
 import Settings from "./pages/settings/settings";
+import Community from "./pages/community/community";
 
 function App() {
   const logedIn = true;
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/chats" element={<Chats />} />
+            <Route path="/community" element={<Community />} />
             <Route path="/shedule" element={<Shedule />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
