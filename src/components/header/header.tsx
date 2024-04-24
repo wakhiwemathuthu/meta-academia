@@ -57,10 +57,10 @@ function Header({ title }: Props) {
             </li>
             <li>
               <a href="#">Notification 2</a>
-            </li>{" "}
+            </li>
             <li>
               <a href="#">Notification 3</a>
-            </li>{" "}
+            </li>
             <li>
               <a href="#">Notification 4</a>
             </li>
