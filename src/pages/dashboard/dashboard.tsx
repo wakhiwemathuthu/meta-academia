@@ -25,6 +25,7 @@ import {
   FaAnglesLeft,
   FaAnglesRight,
 } from "react-icons/fa6";
+import { TbDotsVertical } from "react-icons/tb";
 
 ChartJS.register(
   CategoryScale,
@@ -146,33 +147,70 @@ function Dashboard() {
             alt="illutration of a student studying"
           />
         </div>
-        <div className="row-span-3 p-4 rounded-2xl bg-white shadow-2xl">
-          <Calendar
-            prev2Label={
-              <div className="flex justify-center">
-                <FaAnglesLeft />
+        <div className="row-span-3 p-4 rounded-2xl bg-white shadow-2xl flex flex-col">
+          <div className="h-full">
+            <Calendar
+              prev2Label={
+                <div className="flex justify-center">
+                  <FaAnglesLeft />
+                </div>
+              }
+              prevLabel={
+                <div className="flex justify-center">
+                  <FaAngleLeft />
+                </div>
+              }
+              next2Label={
+                <div className="flex justify-center">
+                  <FaAnglesRight />
+                </div>
+              }
+              nextLabel={
+                <div className="flex justify-center">
+                  <FaAngleRight />
+                </div>
+              }
+              showNavigation={true}
+              onChange={() => {}}
+              value={[new Date(), new Date("25-04-23")]}
+              className="text-primary"
+            />
+          </div>
+          <div className="h-fit">
+            <div className="flex items-start justify-between">
+              <p className="font-bold text-primary">Upcomming</p>
+              <Link
+                to="/#"
+                className="text-primary opacity-60 text-sm hover:link"
+              >
+                See All
+              </Link>
+            </div>
+            <div className="gap-3 bg-white shadow-4xl flex items-center justify-between mt-4 rounded-2xl p-3">
+              <div>
+                <p className="font-bold text-sm text-primary">Design meeting</p>
+                <p className="text-sm text-primary opacity-60 w-24 text-ellipsis text-nowrap overflow-hidden">
+                  24-04-2024
+                </p>
               </div>
-            }
-            prevLabel={
-              <div className="flex justify-center">
-                <FaAngleLeft />
+              <div className="dropdown dropdown-left">
+                <div tabIndex={0} role="button">
+                  <TbDotsVertical className="text-primary text-lg" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu w-max bg-white rounded-2xl shadow-4xl"
+                >
+                  <li>
+                    <a href="#">Option 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Option 2</a>
+                  </li>
+                </ul>
               </div>
-            }
-            next2Label={
-              <div className="flex justify-center">
-                <FaAnglesRight />
-              </div>
-            }
-            nextLabel={
-              <div className="flex justify-center">
-                <FaAngleRight />
-              </div>
-            }
-            showNavigation={true}
-            onChange={() => {}}
-            value={[new Date(), new Date("25-04-23")]}
-            className="text-primary"
-          />
+            </div>
+          </div>
         </div>
         <div className=" p-4 rounded-2xl bg-white shadow-2xl row-span-2">
           <div>
