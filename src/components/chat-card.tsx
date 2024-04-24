@@ -8,9 +8,9 @@ type Props = {
 
 function ChatCard({ username, message }: Props) {
   return (
-    <div className="gap-3 bg-white shadow-4xl overflow-y-auto flex items-center justify-between  rounded-2xl p-3">
+    <div className="gap-3 bg-white shadow-4xl flex items-center justify-between  rounded-2xl p-3">
       <div className="flex items-center gap-3 w-full">
-        <Avatar name={username} size="45" className="rounded-full" />
+        <Avatar name={username} size="45" round />
         <div>
           <p className="font-bold text-sm text-primary">{username}</p>
           <p className="text-sm text-primary opacity-60 w-24 text-ellipsis text-nowrap overflow-hidden">

@@ -1,6 +1,6 @@
 import Header from "../../components/header/header";
 import { Calendar } from "react-calendar";
-// import "react-calendar/dist/Calendar.css";
+import "react-calendar/dist/Calendar.css";
 import studentIllustration from "../../assets/student-studying.png";
 import {
   Chart as ChartJS,
@@ -19,6 +19,8 @@ import { ChangeEvent, useState } from "react";
 import CourseCard from "../../components/course-card";
 import { Link } from "react-router-dom";
 import ChatCard from "../../components/chat-card";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 ChartJS.register(
   CategoryScale,
@@ -141,6 +143,7 @@ function Dashboard() {
         </div>
         <div className="row-span-3 p-4 rounded-2xl bg-white shadow-2xl">
           <Calendar
+            showNavigation={false}
             onChange={() => {}}
             value={[new Date(), new Date("25-04-23")]}
             className="text-primary"
@@ -241,7 +244,7 @@ function Dashboard() {
                 See All
               </Link>
             </div>
-            <div className="h-full flex flex-col justify-center gap-3">
+            <div className="h-full overflow-y-auto flex flex-col justify-center gap-3">
               <ChatCard
                 username={"John Doe"}
                 message={"Guys i need help in TypeScript"}
