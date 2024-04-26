@@ -31,7 +31,7 @@ function Sidebar() {
             />
             <SidebarItem
               to="/leaderboard"
-              title="LeaderBoard"
+              title="Leaderboard"
               icon={<GoTrophy />}
             />
             <SidebarItem

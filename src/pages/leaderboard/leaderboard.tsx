@@ -6,7 +6,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 function LeaderBoard() {
   return (
     <div className="h-full">
-      <Header title="LeaderBoard" />
+      <Header title="Leaderboard" />
       <div className="absolute flex flex-col gap-4 top-20 left-0 right-0 bottom-0 p-4">
         <div className="h-full bg-white rounded-2xl shadow-2xl p-4">
           <div className="flex items-center justify-between">
@@ -159,7 +159,7 @@ function LeaderBoard() {
             <IoIosArrowBack className="text-xl text-primary group-hover:text-white" />
           </button>
           <button className="btn btn-sm join-item bg-white text-primary">
-            Page 16
+            Page 1
           </button>
           <button className="join-item btn btn-sm bg-white text-primary group hover:bg-primary">
             <IoIosArrowForward className="text-xl text-primary group-hover:text-white" />
