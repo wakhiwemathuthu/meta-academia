@@ -137,7 +137,7 @@ function Dashboard() {
               supporting you on your educational journey.Don't miss the latest
               UI challenges.
             </p>
-            <button className="btn btn-sm bg-white border-none mt-3 text-primary hover:bg-white">
+            <button className="btn btn-sm bg-white border-none mt-3 text-primary hover:bg-white px-6">
               View
             </button>
           </div>
