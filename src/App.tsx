@@ -9,6 +9,7 @@ import Shedule from "./pages/shedule/shedule";
 import Profile from "./pages/profile/profile";
 import Settings from "./pages/settings/settings";
 import Community from "./pages/community/community";
+import LeaderBoard from "./pages/leaderboard/leaderboard";
 
 function App() {
   const logedIn = true;
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/leaderboard" element={<LeaderBoard />} />
             <Route path="/shedule" element={<Shedule />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />

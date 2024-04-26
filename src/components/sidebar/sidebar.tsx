@@ -6,6 +6,7 @@ import { MdOutlineDateRange, MdOutlineWorkspacePremium } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 import { FiSettings } from "react-icons/fi";
 import learningIllustration from "../../assets/learning-illustartion.png";
+import { GoTrophy } from "react-icons/go";
 
 function Sidebar() {
   return (
@@ -27,6 +28,11 @@ function Sidebar() {
               to="/community"
               title="Community"
               icon={<HiOutlineChatBubbleBottomCenterText />}
+            />
+            <SidebarItem
+              to="/leaderboard"
+              title="LeaderBoard"
+              icon={<GoTrophy />}
             />
             <SidebarItem
               to="/shedule"
