@@ -8,7 +8,7 @@ type Props = {
 
 function CourseCard({ status, title, createdBy, progress }: Props) {
   return (
-    <div className="gap-3 bg-white shadow-4xl flex items-center justify-between  rounded-2xl p-3">
+    <div className="gap-3 bg-white flex items-center justify-between  rounded-2xl p-3 hover:shadow-4xl hover:border-white border border-neutral-100 transition-all cursor-pointer">
       <div className="flex items-center gap-3 w-full">
         <span
           className={`w-3 h-3 rounded-full ${

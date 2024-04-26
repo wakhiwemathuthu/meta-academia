@@ -186,7 +186,7 @@ function Dashboard() {
                 See All
               </Link>
             </div>
-            <div className="gap-3 bg-white shadow-4xl flex items-center justify-between mt-4 rounded-2xl p-3">
+            <div className="gap-3 bg-white hover:shadow-4xl hover:border-white border border-neutral-100 transition-all cursor-pointer flex items-center justify-between mt-4 rounded-2xl p-3">
               <div>
                 <p className="font-bold text-sm text-primary">Design meeting</p>
                 <p className="text-sm text-primary opacity-60 w-24 text-ellipsis text-nowrap overflow-hidden">
