@@ -77,7 +77,7 @@ function Courses() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between mt-3">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className=" badge text-primary">Web Designing</span>
                     <span className=" badge">UI /UX Designing</span>
                   </div>
@@ -175,7 +175,7 @@ function Courses() {
                 </div>
               </div>
               <div className="flex items-center justify-between mt-3">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className=" badge text-primary">Web Designing</span>
                   <span className=" badge">UI /UX Designing</span>
                 </div>
