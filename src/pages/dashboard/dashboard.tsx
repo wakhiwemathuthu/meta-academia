@@ -134,8 +134,8 @@ function Dashboard() {
             <p className="text-white mt-3">
               It's a pleasure to have you back with us. Your commitment to
               learning is truly commendable, and we're excited to continue
-              supporting you on your educational journey.Don't miss the latest
-              UI challenges.
+              supporting you on your educational journey.Don't miss out the
+              latest quizzes.
             </p>
             <button className="btn btn-sm bg-white border-none mt-3 text-primary hover:bg-white px-6">
               View
