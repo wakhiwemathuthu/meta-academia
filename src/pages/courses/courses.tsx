@@ -3,8 +3,16 @@ import Header from "../../components/header/header";
 import { LuClock3 } from "react-icons/lu";
 import { PiFilesBold } from "react-icons/pi";
 import { BsDot } from "react-icons/bs";
+import { useState } from "react";
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 
 function Courses() {
+  const [liked, setLiked] = useState(false);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+  };
+
   return (
     <div className="h-full">
       <Header title="Courses" />
@@ -26,10 +34,25 @@ function Courses() {
                 alt=""
                 className="block h-36 w-36 object-cover rounded-xl"
               />
-              <div>
-                <p className="font-semibold text-primary">
-                  UX & Web Design Master Course: Strategy, Design, Development
-                </p>
+              <div className="w-full">
+                <div className="flex items-center justify-between">
+                  <p className="font-semibold text-primary">
+                    UX & Web Design Master Course: Strategy, Design, Development
+                  </p>
+                  <div className="">
+                    <button
+                      onClick={toggleLike}
+                      className="btn btn-ghost btn-circle hover:bg-neutral-100"
+                    >
+                      {liked ? (
+                        <IoMdHeart className="text-xl text-red-500" />
+                      ) : (
+                        <IoMdHeartEmpty className="text-xl text-red-500" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+
                 <p className="text-primary opacity-60 mt-1">
                   Learn how to apply User Expereience (UX) principles to your
                   website designs
@@ -42,20 +65,61 @@ function Courses() {
                       alt=""
                       className="block w-8 h-8 rounded-full"
                     />
-                    <p>Wakhiwe Mathuthu</p>
+                    <p className="opacity-60">Wakhiwe Mathuthu</p>
                   </div>
-                  <BsDot />
-                  <div className="flex items-center gap-2">
+                  <BsDot className="opacity-60" />
+                  <div className="flex items-center gap-2 opacity-60">
                     <PiFilesBold />
                     <p>62 lectures</p>
                   </div>
-                  <BsDot />
-                  <div className="flex items-center gap-2">
+                  <BsDot className="opacity-60" />
+                  <div className="flex items-center gap-2 opacity-60">
                     <LuClock3 />
                     <p>3h 4m total length</p>
                   </div>
                 </div>
-
+                <div className="flex items-center justify-between mt-3">
+                  <div className="flex items-center gap-2">
+                    <span className=" badge text-primary">Web Designing</span>
+                    <span className=" badge">UI /UX Designing</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm text-primary">(3/5)</p>
+                    <div className="rating rating-sm">
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-2"
+                        className="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-2"
+                        className="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        disabled
+                        checked
+                        type="radio"
+                        name="rating-2"
+                        className="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-2"
+                        className="mask mask-star-2 bg-orange-400"
+                      />
+                      <input
+                        disabled
+                        type="radio"
+                        name="rating-2"
+                        className="mask mask-star-2 bg-orange-400"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
