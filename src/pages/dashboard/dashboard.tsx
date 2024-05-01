@@ -18,7 +18,6 @@ import { Line, Doughnut } from "react-chartjs-2";
 import { ChangeEvent, useState } from "react";
 import CourseCard from "../../components/course-card";
 import { Link } from "react-router-dom";
-import ChatCard from "../../components/chat-card";
 import {
   FaAngleLeft,
   FaAngleRight,
@@ -26,6 +25,7 @@ import {
   FaAnglesRight,
 } from "react-icons/fa6";
 import { TbDotsVertical } from "react-icons/tb";
+import TopStudentsCard from "../../components/chat-card";
 
 ChartJS.register(
   CategoryScale,
@@ -299,29 +299,35 @@ function Dashboard() {
         <div className="p-4 rounded-2xl bg-white shadow-2xl row-span-2">
           <div className="h-full flex flex-col">
             <div className="flex items-start h-full justify-between">
-              <p className="font-bold text-primary">Community</p>
+              <p className="font-bold text-primary">Top Ranked Students</p>
               <Link
-                to="/community"
+                to="/leaderboard"
                 className="text-primary opacity-60 text-sm hover:link"
               >
                 See All
               </Link>
             </div>
             <div className="h-full flex flex-col gap-3">
-              <ChatCard
-                username={"John Doe"}
-                message={"Guys i need help in TypeScript"}
-                date="24-04-24"
+              <TopStudentsCard
+                profile={{
+                  name: "Amanda Rollins",
+                  location: "New York, USA",
+                }}
+                points={3523}
               />
-              <ChatCard
-                username={"Wakhiwe"}
-                message={"Hello Everyone"}
-                date="22-04-24"
+              <TopStudentsCard
+                profile={{
+                  name: "Ethan Hunt",
+                  location: "Paris, France",
+                }}
+                points={3050}
               />
-              <ChatCard
-                username={"Faith Matt"}
-                message={" Lorem ipsum dolor sit amet."}
-                date="26-04-24"
+              <TopStudentsCard
+                profile={{
+                  name: "Lara Croft",
+                  location: "London, UK",
+                }}
+                points={2875}
               />
             </div>
           </div>
