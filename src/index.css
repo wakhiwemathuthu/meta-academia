@@ -5,6 +5,9 @@
 * {
   box-sizing: border-box;
 }
+.react-calendar {
+  border: none;
+}
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
   background-color: #344563;
