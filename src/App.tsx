@@ -12,9 +12,9 @@ import Community from "./pages/community/community";
 import LeaderBoard from "./pages/leaderboard/leaderboard";
 
 function App() {
-  const logedIn = true;
+  const loggedIn = true;
 
-  if (logedIn) {
+  if (loggedIn) {
     return (
       <div className="bg-[#f6f9fb] relative h-screen">
         <Sidebar />
