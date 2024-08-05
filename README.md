@@ -1,6 +1,8 @@
 # MetaAcademia
 
-E-learning platform empowering learners to master programming skills with comprehensive courses and practical projects.
+A React-based user interface for an e-learning platform, designed to provide an intuitive and responsive experience. The UI emphasizes a clean, user-friendly layout for seamless navigation through course materials and interactive elements.
+
+---
 
 **View live version** : https://wakhiwemathuthu.github.io/meta-academia
 
@@ -19,7 +21,7 @@ Follow these steps to get the ThreadSocket app up and running on your local mach
 
 1. Clone this repository:
    ```
-   https://github.com/Meta-II/meta-academia.git
+   https://github.com/wakhiwemathuthu/meta-academia.git
    ```
 2. Navigate to the project directory:
    ```
